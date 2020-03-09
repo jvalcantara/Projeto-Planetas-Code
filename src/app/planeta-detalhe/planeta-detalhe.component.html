@@ -1,0 +1,13 @@
+<div *ngIf="planeta">
+  <h2>{{planeta.nome | uppercase}} Detalhes</h2>
+  <div><span>id: </span>{{planeta.id}}</div>
+  <div class="espaço"><span>life: </span>{{planeta.life}}</div>
+  <div><span>data: {{planeta.data}}</span></div>
+  <div>
+    <label>nome:
+      <input [(ngModel)]="planeta.nome" placeholder="planeta"/>
+    </label>
+  </div>
+  <button (click)="goBack()">go back</button>
+  <button (click)="save()">save</button>
+</div>
