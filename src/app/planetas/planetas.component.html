@@ -1,0 +1,30 @@
+<h2>Adicionar novo planeta:</h2>
+
+<div>
+  <label>Planeta nome:
+    <input #planetaNome />
+    <button (click)="add(planetaNome.value,planetaLife.value,planetaData.value); planetaNome.value=''">
+      adicionar
+    </button>
+  </label>
+  <br>
+  <div class = "espaço">
+  <label>Planeta life:
+    <input #planetaLife      />
+  </label>
+  <br>
+  </div>
+  <label>Planeta data:
+    <input #planetaData />
+  </label>
+</div>
+
+<ul class="planetas">
+  <li *ngFor="let planeta of planetas">
+    <a routerLink="/detail/{{planeta.id}}">
+      <span class="badge">{{planeta.id}}</span> {{planeta.nome}}
+    </a>
+    <button class="delete" title="delete planeta"
+      (click)="delete(planeta)">x</button>
+  </li>
+</ul> 

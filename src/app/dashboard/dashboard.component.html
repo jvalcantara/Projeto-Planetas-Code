@@ -1,0 +1,12 @@
+<h3>Lista de Planetas</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let planeta of planetas" class="col-1-4"
+      routerLink="/detail/{{planeta.nome}}">
+    <div class="module planeta">
+      <br>
+      <h4>{{planeta.nome}}</h4>
+    </div>
+  </a>
+</div>
+
+<app-planeta-busca></app-planeta-busca>
